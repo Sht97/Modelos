@@ -1,0 +1,74 @@
+
+--------------------------------------------------------------------------------
+       Segmentation violation detected at jue may 21 03:11:51 2020 -0500
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  Deployed                 : false
+  Desktop Environment      : ubuntu:GNOME
+  GNU C Library            : 2.31 stable
+  Graphics Driver          : NVIDIA Corporation GeForce GTX 1050/PCIe/SSE2 Version 4.6.0 NVIDIA 435.21
+  Graphics card 1          : 0x10de ( 0x10de ) 0x1c8d Version 435.21.0.0 (0-0-0)
+  Graphics card 2          : 0x8086 ( 0x8086 ) 0x591b Version 0.0.0.0 (0-0-0)
+  Java Version             : Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  MATLAB Architecture      : glnxa64
+  MATLAB Entitlement ID    : 7155739
+  MATLAB Root              : /usr/local/MATLAB/R2020a
+  MATLAB Version           : 9.8.0.1359463 (R2020a) Update 1
+  OpenGL                   : hardware
+  Operating System         : Ubuntu 20.04 LTS
+  Process ID               : 68056
+  Processor ID             : x86 Family 6 Model 158 Stepping 9, GenuineIntel
+  Session Key              : 88d31742-3d2b-4adf-9a7e-f1c6ac204a52
+  Static TLS mitigation    : Enabled: Full
+  Window System            : The X.Org Foundation (12008000), display :0
+
+Fault Count: 1
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00007f1863212400  RBX = 00007f17d8f171f8
+  RCX = 0000000000000001  RDX = 0000000000000042
+  RSP = 00007f17e13d6678  RBP = 00007f17e13d66a0
+  RSI = 0000000000000000  RDI = 00007f17d8f171f8
+
+   R8 = 00007f17d8f17000   R9 = 0000000000000000
+  R10 = 0000000000000da4  R11 = 00000000d04333d0
+  R12 = 0000000000000000  R13 = 0000000000000000
+  R14 = 00007f17e1ddc380  R15 = 00007f17d8f17000
+
+  RIP = 00007f1823a0f0ba  EFL = 0000000000010246
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00007f1823a0f0ba                                   <unknown-module>+00000000
+[  1] 0x00007f1879c4aced                  /lib/x86_64-linux-gnu/libX11.so.6+00417005 _XimServerDestroy+00000077
+[  2] 0x00007f17c085c520                                   <unknown-module>+00000000
+
+
+Program State:
+
+Most Recent Simulink Activity:
+Return : OK in editor 4 at Wed May 20 22:57:34 2020
+		undo Parameter Changes : OK in editor 4 at Wed May 20 22:56:33 2020
+		Parameter Changes : OK in editor 4 at Wed May 20 22:56:33 2020
+		Move : OK in editor 4 at Wed May 20 22:45:59 2020
+		Parameter Changes : OK in editor 4 at Wed May 20 22:45:37 2020
+		undo Parameter Changes : OK in editor 4 at Wed May 20 22:45:23 2020
+		Parameter Changes : OK in editor 4 at Wed May 20 22:45:23 2020
+		Delete : OK in editor 4 at Wed May 20 22:44:28 2020
+		Create Segment : OK in editor 4 at Wed May 20 22:44:25 2020
+		Disconnect Line : OK in editor 4 at Wed May 20 22:44:19 2020
+		
+
+Most Recent Tool Interaction:
+Editor 4: tools idle, Simulink::MoveTool is most recently active tool since Wed May 20 22:45:59 2020
+		
+

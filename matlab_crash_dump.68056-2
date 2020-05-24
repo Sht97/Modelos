@@ -1,0 +1,119 @@
+
+--------------------------------------------------------------------------------
+              Assertion detected at jue may 21 03:11:51 2020 -0500
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  Deployed                 : false
+  Desktop Environment      : ubuntu:GNOME
+  GNU C Library            : 2.31 stable
+  Graphics Driver          : NVIDIA Corporation GeForce GTX 1050/PCIe/SSE2 Version 4.6.0 NVIDIA 435.21
+  Graphics card 1          : 0x10de ( 0x10de ) 0x1c8d Version 435.21.0.0 (0-0-0)
+  Graphics card 2          : 0x8086 ( 0x8086 ) 0x591b Version 0.0.0.0 (0-0-0)
+  Java Version             : Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  MATLAB Architecture      : glnxa64
+  MATLAB Entitlement ID    : 7155739
+  MATLAB Root              : /usr/local/MATLAB/R2020a
+  MATLAB Version           : 9.8.0.1359463 (R2020a) Update 1
+  OpenGL                   : hardware
+  Operating System         : Ubuntu 20.04 LTS
+  Process ID               : 68056
+  Processor ID             : x86 Family 6 Model 158 Stepping 9, GenuineIntel
+  Session Key              : 88d31742-3d2b-4adf-9a7e-f1c6ac204a52
+  Static TLS mitigation    : Enabled: Full
+  Window System            : The X.Org Foundation (12008000), display :0
+
+Fault Count: 2
+
+
+Abnormal termination:
+Segmentation violation
+
+Register State (from fault):
+  RAX = 00007f1863212400  RBX = 00007f17d8f171f8
+  RCX = 0000000000000001  RDX = 0000000000000042
+  RSP = 00007f17e13d6678  RBP = 00007f17e13d66a0
+  RSI = 0000000000000000  RDI = 00007f17d8f171f8
+
+   R8 = 00007f17d8f17000   R9 = 0000000000000000
+  R10 = 0000000000000da4  R11 = 00000000d04333d0
+  R12 = 0000000000000000  R13 = 0000000000000000
+  R14 = 00007f17e1ddc380  R15 = 00007f17d8f17000
+
+  RIP = 00007f1823a0f0ba  EFL = 0000000000010246
+
+   CS = 0033   FS = 0000   GS = 0000
+
+Stack Trace (from fault):
+[  0] 0x00007f1823a0f0ba                                   <unknown-module>+00000000
+[  1] 0x00007f1879c4aced                  /lib/x86_64-linux-gnu/libX11.so.6+00417005 _XimServerDestroy+00000077
+[  2] 0x00007f17c085c520                                   <unknown-module>+00000000
+
+
+Assertion:
+The X11 connection broke (error 1). Did the X11 server die?
+
+Register State (captured):
+  RAX = 000000000000001a  RBX = 00007f1882c5c088
+  RCX = 000000000000000a  RDX = 00007f1882c3b6a8
+  RSP = 00007f177b9666d0  RBP = 00007f177b966a90
+  RSI = 00007f1882c01bee  RDI = 00007f177b9666e0
+
+   R8 = 0000000000000000   R9 = 0000000000000000
+  R10 = 0000ffff00001fa5  R11 = 0000000000000007
+  R12 = 00007f177b966ab0  R13 = 00007f177b966f20
+  R14 = 0000000000000000  R15 = 0000000000000000
+
+  RIP = 00007f1882b5284e  EFL = 0000000000000019
+
+   CS = 4229   FS = 8311   GS = 7f18
+
+Stack Trace (captured):
+[  0] 0x00007f1882b49553    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00853331
+[  1] 0x00007f1882b4974c    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00853836 _ZN10foundation4core4diag15stacktrace_base7captureEm+00000028
+[  2] 0x00007f1882b4c540    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00865600
+[  3] 0x00007f1882b4de2f    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00871983
+[  4] 0x00007f1882b4dec2    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00872130
+[  5] 0x00007f1774298907 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/shared_dastudio_builtins/../../../../bin/glnxa64/libmwglee.so+01251591
+[  6] 0x00007f17b762425f /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+00586335
+[  7] 0x00007f17b7624290 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+00586384
+[  8] 0x00007f17b7624730 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+00587568 _ZNK14QMessageLogger5fatalEPKcz+00000150
+[  9] 0x00007f176b103f43 /usr/local/MATLAB/R2020a/bin/glnxa64/libQt5XcbQpa.so.5+00319299 _ZN14QXcbConnection16processXcbEventsEv+00000097
+[ 10] 0x00007f17b774469f /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+01767071 _ZN7QObject5eventEP6QEvent+00000189
+[ 11] 0x00007f176ddce013 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/shared_dastudio_builtins/../../../../bin/glnxa64/libQt5Widgets.so.5+01462291 _ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+00000155
+[ 12] 0x00007f176ddd2492 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/shared_dastudio_builtins/../../../../bin/glnxa64/libQt5Widgets.so.5+01479826 _ZN12QApplication6notifyEP7QObjectP6QEvent+00005208
+[ 13] 0x00007f177429d9f6 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/shared_dastudio_builtins/../../../../bin/glnxa64/libmwglee.so+01272310
+[ 14] 0x00007f17b772e13d /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+01675581 _ZN16QCoreApplication14notifyInternalEP7QObjectP6QEvent+00000095
+[ 15] 0x00007f17b77303c8 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+01684424 _ZN23QCoreApplicationPrivate16sendPostedEventsEP7QObjectiP11QThreadData+00000444
+[ 16] 0x00007f17b775abbb /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+01858491 _ZN20QEventDispatcherUNIX13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+00000051
+[ 17] 0x00007f176b160ad6 /usr/local/MATLAB/R2020a/bin/glnxa64/libQt5XcbQpa.so.5+00699094
+[ 18] 0x00007f17b772d82a /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+01673258 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+00000406
+[ 19] 0x00007f17b7730b99 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/vnv/requirements/datamodel/../../../../../../bin/glnxa64/libQt5Core.so.5+01686425 _ZN16QCoreApplication4execEv+00000279
+[ 20] 0x00007f1774312348 /usr/local/MATLAB/R2020a/bin/glnxa64/builtins/shared_dastudio_builtins/../../../../bin/glnxa64/libmwglee.so+01749832
+[ 21] 0x00007f1884137e5f /usr/local/MATLAB/R2020a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00757343
+[ 22] 0x00007f188440b609              /lib/x86_64-linux-gnu/libpthread.so.0+00038409
+[ 23] 0x00007f1883d98103                    /lib/x86_64-linux-gnu/libc.so.6+01188099 clone+00000067
+
+
+Program State:
+
+Most Recent Simulink Activity:
+Return : OK in editor 4 at Wed May 20 22:57:34 2020
+		undo Parameter Changes : OK in editor 4 at Wed May 20 22:56:33 2020
+		Parameter Changes : OK in editor 4 at Wed May 20 22:56:33 2020
+		Move : OK in editor 4 at Wed May 20 22:45:59 2020
+		Parameter Changes : OK in editor 4 at Wed May 20 22:45:37 2020
+		undo Parameter Changes : OK in editor 4 at Wed May 20 22:45:23 2020
+		Parameter Changes : OK in editor 4 at Wed May 20 22:45:23 2020
+		Delete : OK in editor 4 at Wed May 20 22:44:28 2020
+		Create Segment : OK in editor 4 at Wed May 20 22:44:25 2020
+		Disconnect Line : OK in editor 4 at Wed May 20 22:44:19 2020
+		
+
+Most Recent Tool Interaction:
+Editor 4: tools idle, Simulink::MoveTool is most recently active tool since Wed May 20 22:45:59 2020
+		
+

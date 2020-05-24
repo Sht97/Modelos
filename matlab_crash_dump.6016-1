@@ -1,0 +1,73 @@
+
+--------------------------------------------------------------------------------
+             Assertion detected at mié may 20 13:16:21 2020 -0500
+--------------------------------------------------------------------------------
+
+Configuration:
+  Crash Decoding           : Disabled - No sandbox or build area path
+  Crash Mode               : continue (default)
+  Default Encoding         : UTF-8
+  Deployed                 : false
+  Desktop Environment      : ubuntu:GNOME
+  GNU C Library            : 2.31 stable
+  Graphics Driver          : NVIDIA Corporation GeForce GTX 1050/PCIe/SSE2 Version 4.6.0 NVIDIA 440.64
+  Graphics card 1          : 0x10de ( 0x10de ) 0x1c8d Version 440.64.0.0 (0-0-0)
+  Graphics card 2          : 0x8086 ( 0x8086 ) 0x591b Version 0.0.0.0 (0-0-0)
+  Java Version             : Java 1.8.0_202-b08 with Oracle Corporation Java HotSpot(TM) 64-Bit Server VM mixed mode
+  MATLAB Architecture      : glnxa64
+  MATLAB Entitlement ID    : 7155739
+  MATLAB Root              : /usr/local/MATLAB/R2020a
+  MATLAB Version           : 9.8.0.1359463 (R2020a) Update 1
+  OpenGL                   : hardware
+  Operating System         : Ubuntu 20.04 LTS
+  Process ID               : 6016
+  Processor ID             : x86 Family 6 Model 158 Stepping 9, GenuineIntel
+  Session Key              : 224c79eb-0e9e-4571-b1e5-95be50d3d5d2
+  Static TLS mitigation    : Enabled: Full
+  Window System            : The X.Org Foundation (12008000), display :0
+
+Fault Count: 1
+
+
+Additional Log Files:
+  Java Crash Report        : /home/sht/hs_error_pid6016.log
+  Java Log                 : /home/sht/java.log.6016
+
+
+Assertion in void {anonymous}::mwJavaAbort() at javainit.cpp line 1395:
+Fatal Java Exception. See this file for details: /home/sht/hs_error_pid6016.log
+
+Register State (captured):
+  RAX = 0000000000000000  RBX = 00007fc1d62f0088
+  RCX = 000000000000000a  RDX = 00007fc1d62cf6a8
+  RSP = 00007fc1a2ffab90  RBP = 00007fc1a2ffaf50
+  RSI = 00007fc1d6295bee  RDI = 00007fc1a2ffaba0
+
+   R8 = 00007fc1a2ffae64   R9 = 00007fc1a2ffae64
+  R10 = 0000ffff00001fa0  R11 = 0000000000000000
+  R12 = 00007fc1d62e0008  R13 = 00007fc1a2ffb7d0
+  R14 = 00007fc1bee07583  R15 = 00007fc1bee124c0
+
+  RIP = 00007fc1d61e684e  EFL = 0000000000000000
+
+   CS = 0000   FS = 0000   GS = 0000
+
+Stack Trace (captured):
+[  0] 0x00007fc1d61dd553    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00853331
+[  1] 0x00007fc1d61dd74c    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00853836 _ZN10foundation4core4diag15stacktrace_base7captureEm+00000028
+[  2] 0x00007fc1d61e2989    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00874889
+[  3] 0x00007fc1d61e2af0    /usr/local/MATLAB/R2020a/bin/glnxa64/libmwfl.so+00875248
+[  4] 0x00007fc1bedb37ee /usr/local/MATLAB/R2020a/bin/glnxa64/matlab_startup_plugins/jmi/../../../../bin/glnxa64/libmwjmi.so+01415150
+[  5] 0x00007fc1b6189700 /usr/local/MATLAB/R2020a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+09496320
+[  6] 0x00007fc1b5f4073b /usr/local/MATLAB/R2020a/sys/java/jre/glnxa64/jre/lib/amd64/server/libjvm.so+07100219
+[  7] 0x00007fc0d515bc42 /usr/local/MATLAB/R2020a/bin/glnxa64/libnativewindow_x11.so+00011330 NativewindowCommon_FatalError+00000268
+[  8] 0x00007fc0d515c988 /usr/local/MATLAB/R2020a/bin/glnxa64/libnativewindow_x11.so+00014728
+[  9] 0x00007fc1cd2ba1a2                  /lib/x86_64-linux-gnu/libX11.so.6+00266658 _XIOError+00000082
+[ 10] 0x00007fc1cd2b785d                  /lib/x86_64-linux-gnu/libX11.so.6+00256093 _XEventsQueued+00000125
+[ 11] 0x00007fc1cd2a90e8                  /lib/x86_64-linux-gnu/libX11.so.6+00196840 XEventsQueued+00000088
+[ 12] 0x00007fc1be221812                   /lib/x86_64-linux-gnu/libXt.so.6+00190482 XtAppPending+00000114
+[ 13] 0x00007fc1be6fc348 /usr/local/MATLAB/R2020a/bin/glnxa64/matlab_startup_plugins/matlab_graphics_ui/../../../../bin/glnxa64/libmwuix.so+00217928
+[ 14] 0x00007fc1d77cbe5f /usr/local/MATLAB/R2020a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6+00757343
+[ 15] 0x00007fc1d7a9f609              /lib/x86_64-linux-gnu/libpthread.so.0+00038409
+[ 16] 0x00007fc1d742c103                    /lib/x86_64-linux-gnu/libc.so.6+01188099 clone+00000067
+
